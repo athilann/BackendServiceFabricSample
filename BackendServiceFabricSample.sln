@@ -7,9 +7,9 @@ Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "BackendServiceFabricSample"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainService", "MainService\MainService.csproj", "{3D13EA0E-1C9A-4AE3-9FAE-5A0CDF6A66A0}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Services Layer", "1 - Services Layer", "{49124A7A-23BC-417B-8D2F-54477956663A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Services Layer", "2 - Services Layer", "{49124A7A-23BC-417B-8D2F-54477956663A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Data Layer", "2 - Data Layer", "{B93D8EB7-8E5A-4D52-9C8F-40425DA57432}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Data Layer", "3 - Data Layer", "{B93D8EB7-8E5A-4D52-9C8F-40425DA57432}"
 EndProject
 Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "DataManagerService", "DataManagerService\DataManagerService.sfproj", "{BF878602-0028-4F66-A894-D8E6187EA109}"
 EndProject
@@ -17,7 +17,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseManager", "Database
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheManager", "CacheManager\CacheManager.csproj", "{57293E1A-3FA6-4D0B-95C2-71E5AD3BD071}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EndPointService", "EndPointService\EndPointService.csproj", "{13D57D25-77CD-4C13-B6F5-804C65EF6148}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EndPointService", "EndPointService\EndPointService.csproj", "{13D57D25-77CD-4C13-B6F5-804C65EF6148}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Domain", "1 - Domain", "{9896B3BA-B9FE-40BF-B4AE-BC1236193900}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.BackendService.MainService", "Domain.BackendService.MainService\Domain.BackendService.MainService.csproj", "{15906758-5849-417E-9831-F6284E78EA87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +73,14 @@ Global
 		{13D57D25-77CD-4C13-B6F5-804C65EF6148}.Release|Any CPU.Build.0 = Release|Any CPU
 		{13D57D25-77CD-4C13-B6F5-804C65EF6148}.Release|x64.ActiveCfg = Release|Any CPU
 		{13D57D25-77CD-4C13-B6F5-804C65EF6148}.Release|x64.Build.0 = Release|Any CPU
+		{15906758-5849-417E-9831-F6284E78EA87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15906758-5849-417E-9831-F6284E78EA87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15906758-5849-417E-9831-F6284E78EA87}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{15906758-5849-417E-9831-F6284E78EA87}.Debug|x64.Build.0 = Debug|Any CPU
+		{15906758-5849-417E-9831-F6284E78EA87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15906758-5849-417E-9831-F6284E78EA87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15906758-5849-417E-9831-F6284E78EA87}.Release|x64.ActiveCfg = Release|Any CPU
+		{15906758-5849-417E-9831-F6284E78EA87}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,6 +92,7 @@ Global
 		{0B0B1970-B416-4DBF-8443-FB2A2F74C2B2} = {B93D8EB7-8E5A-4D52-9C8F-40425DA57432}
 		{57293E1A-3FA6-4D0B-95C2-71E5AD3BD071} = {B93D8EB7-8E5A-4D52-9C8F-40425DA57432}
 		{13D57D25-77CD-4C13-B6F5-804C65EF6148} = {49124A7A-23BC-417B-8D2F-54477956663A}
+		{15906758-5849-417E-9831-F6284E78EA87} = {9896B3BA-B9FE-40BF-B4AE-BC1236193900}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BAE525E3-1B28-4C84-9FF8-66030F09CB1D}

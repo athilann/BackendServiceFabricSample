@@ -37,7 +37,7 @@ namespace EndPointService
                     Description = "A simple api that provides basic CRUD's",
                     TermsOfService = "None"
                 });
-                c.OperationFilter<AuthorizationHeaderParameterOperationFilter>();
+                //c.OperationFilter<AuthorizationHeaderParameterOperationFilter>();
             });
         }
 
