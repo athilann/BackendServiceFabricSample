@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace EndPointService
 {
@@ -24,6 +25,20 @@ namespace EndPointService
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.AddMvcCore().AddApiExplorer();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info
+                {
+                    Version = "v1",
+                    Title = "Transaction API",
+                    Description = "A simple api that provides basic CRUD's",
+                    TermsOfService = "None"
+                });
+                c.OperationFilter<AuthorizationHeaderParameterOperationFilter>();
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -33,8 +48,16 @@ namespace EndPointService
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseMvc();
+
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Transaction API");
+            });
+
         }
     }
 }
