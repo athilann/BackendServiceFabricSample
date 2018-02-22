@@ -6,6 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Domain.BackendService.MainService;
 using Domain.BackendService.MainService.Contracts;
+using MainService.Service;
 using Microsoft.ServiceFabric.Data.Collections;
 using Microsoft.ServiceFabric.Services.Communication.Runtime;
 using Microsoft.ServiceFabric.Services.Remoting.Runtime;
@@ -18,23 +19,32 @@ namespace MainService
     /// </summary>
     internal sealed class MainService : StatefulService , IMainService
     {
+        private ServiceApplication _service;
         public MainService(StatefulServiceContext context)
             : base(context)
-        { }
+        {
+            _service = new ServiceApplication();
+        }
 
         public Task<ResponseDeleteTransaction> DeleteTransaction(RequestDeleteTransaction request)
         {
-            throw new NotImplementedException("DeleteTransaction falta implementar");
+            return Task.Run(() => {
+                return _service.DeleteTransaction(request);
+            });
         }
 
         public Task<ResponseInsertTransaction> InsertTransaction(RequestInsertTransaction request)
         {
-            throw new NotImplementedException("InsertTransaction falta implementar");
+            return Task.Run(() => {
+                return _service.InsertTransaction(request);
+            });
         }
 
         public Task<ResponseSearchTransaction> SearchTransaction(RequestSearchTransaction request)
         {
-            throw new NotImplementedException("SearchTransaction falta implementar");
+            return Task.Run(() => {
+                return _service.SearchTransaction(request);
+            });
         }
 
         /// <summary>

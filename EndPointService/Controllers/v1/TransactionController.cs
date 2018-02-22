@@ -7,24 +7,24 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EndPointService.Controllers.v1
 {
-    [Route("api/v1/transaction/[controller]")]
+    [Route("api/v1/Client/[controller]")]
     [ExceptionHandlerFilter]
-    public class ClientTransactionController : BaseController
+    public class TransactionController : BaseController
     {
-        [HttpPost("InsertTransaction")]
-        public ResponseInsertTransaction InsertTransaction([FromBody]RequestInsertTransaction request)
+        [HttpPost("Insert")]
+        public ResponseInsertTransaction Insert([FromBody]RequestInsertTransaction request)
         {
             return Task.Run(async () => await Service.InsertTransaction(request)).Result;
         }
 
-        [HttpGet("SearchTransaction")]
-        public ResponseSearchTransaction SearchTransaction([FromQuery]RequestSearchTransaction request)
+        [HttpGet("Search")]
+        public ResponseSearchTransaction Search([FromQuery]RequestSearchTransaction request)
         {
             return Task.Run(async () => await Service.SearchTransaction(request)).Result;
         }
 
-        [HttpDelete("DeleteMachine")]
-        public ResponseDeleteTransaction DeleteMachine([FromBody]RequestDeleteTransaction request)
+        [HttpDelete("Delete")]
+        public ResponseDeleteTransaction Delete([FromBody]RequestDeleteTransaction request)
         {
             return Task.Run(async () => await Service.DeleteTransaction(request)).Result;
         }

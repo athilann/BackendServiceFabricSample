@@ -10,6 +10,7 @@ namespace Domain.BackendService.MainService.DataMembers
     {
         public int ID { get; set; }
         public int UserID { get; set; }
+        public DateTime? Date { get; set; }
         public string PayerName { get; set; }
         public string PayerBank { get; set; }
         public string PayerBankAgency { get; set; }

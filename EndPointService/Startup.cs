@@ -33,7 +33,7 @@ namespace EndPointService
                 c.SwaggerDoc("v1", new Info
                 {
                     Version = "v1",
-                    Title = "Transaction API",
+                    Title = "Client API",
                     Description = "A simple api that provides basic CRUD's",
                     TermsOfService = "None"
                 });
